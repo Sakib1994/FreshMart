@@ -1,0 +1,79 @@
+﻿@model FreshMart.ViewModels.SellerVM
+
+@{
+    Layout = "~/Views/Shared/_SellerLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <h2 class="text-center green"> Request To Admin !</h2>
+
+
+                    <h2 class="text-danger"> @Model.Error</h2>
+
+
+
+
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="login-form" method="post" asp-controller="Sellers" asp-action="RequestForSell" role="form">
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="form-group">
+                                    <label asp-for="SellerRequest.SellerName" class="control-label"></label>
+                                    <input asp-for="SellerRequest.SellerName" class="form-control" />
+                                    <span asp-validation-for="SellerRequest.SellerName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="SellerRequest.CompanyName" class="control-label"></label>
+                                    <input asp-for="SellerRequest.CompanyName" class="form-control" />
+                                    <span asp-validation-for="SellerRequest.CompanyName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="SellerRequest.Phone" class="control-label"></label>
+                                    <input asp-for="SellerRequest.Phone" class="form-control" />
+                                    <span asp-validation-for="SellerRequest.Phone" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label asp-for="SellerRequest.DateOfBirth" class="control-label"></label>
+                                    <input asp-for="SellerRequest.DateOfBirth" class="form-control" />
+                                    <span asp-validation-for="SellerRequest.DateOfBirth" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.SellerRequest.DistrictId, htmlAttributes: new { @class = "control-label " })
+                                    <div class="col-md-12">
+                                        @Html.DropDownListFor(model => model.SellerRequest.DistrictId, new SelectList(Model.Districts, "Id", "Name"), "Select District", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.SellerRequest.DistrictId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Be a seller !">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

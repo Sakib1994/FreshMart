@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace FreshMart.Models.ManageViewModels
 {
@@ -16,10 +15,9 @@ namespace FreshMart.Models.ManageViewModels
             [Display(Name = "Verification Code")]
             public string Code { get; set; }
 
-            [BindNever]
+            [ReadOnly(true)]
             public string SharedKey { get; set; }
 
-            [BindNever]
             public string AuthenticatorUri { get; set; }
     }
 }

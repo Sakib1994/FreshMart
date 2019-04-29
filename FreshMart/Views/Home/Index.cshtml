@@ -1,106 +1,252 @@
-﻿@{
+﻿@model FreshMart.ViewModels.ProductViewModel
+
+@{
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
+<!-- banner -->
+<div class="banner" id="home1">
+    <div class="container">
+        <h3>Fresh food <span>Fresh Heart</span></h3>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
+<!-- //banner -->
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+
+<div class="body-content" style=" margin: 0px;">
+    <!---728x90--->
+    <div style='margin: 0 auto;text-align: center;margin-top: 5px;'>
+        <script>
+            var allowedNumberOfEboundDynamicAdds = 4;
+            var sizesEboundDynamicAdsDesktop = ['728x90'];
+            var sizesEboundDynamicAdsTablet = ['728x90'];
+            var sizesEboundDynamicAdsMobile = ['320x100'];
+            eboundAdsTagByDevice(sizesEboundDynamicAdsDesktop, sizesEboundDynamicAdsTablet, sizesEboundDynamicAdsMobile, 'ebound_header_tag');
+
+            if (typeof user_tag_config == 'undefined') {
+                var user_tag_config = {};
+            }
+            user_tag_config['ebound_header_tag'] = {};
+            user_tag_config['ebound_header_tag']['desktop'] = {};
+            user_tag_config['ebound_header_tag']['desktop']['cpm'] = '';
+            user_tag_config['ebound_header_tag']['desktop']['adsCode'] = '';
+            user_tag_config['ebound_header_tag']['tablet'] = {};
+            user_tag_config['ebound_header_tag']['tablet']['cpm'] = '';
+            user_tag_config['ebound_header_tag']['tablet']['adsCode'] = '';
+            user_tag_config['ebound_header_tag']['mobile'] = {};
+            user_tag_config['ebound_header_tag']['mobile']['cpm'] = '';
+            user_tag_config['ebound_header_tag']['mobile']['adsCode'] = '';
+        </script>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+
+
+    <!-- special-deals -->
+    <div class="special-deals">
+        <div class="container">
+            <h2>Special Deals</h2>
+            <div class="w3agile_special_deals_grids">
+                <div class="col-md-7 w3agile_special_deals_grid_left">
+                    <div class="w3agile_special_deals_grid_left_grid">
+                        <img src="~/Assets/images/products/Vegetable-Pepper-1.jpg" alt=" " class="img-responsive" />
+                        <div class="w3agile_special_deals_grid_left_grid_pos1">
+                            <h5>30%<span>Off/-</span></h5>
+                        </div>
+                        <div class="w3agile_special_deals_grid_left_grid_pos">
+                            <h4>We Offer <span>Best Products</span></h4>
+                        </div>
+                    </div>
+                    <div class="wmuSlider example1">
+                        <div class="wmuSliderWrapper">
+                            <article style="position: absolute; width: 100%; opacity: 0;">
+                                <div class="banner-wrap">
+                                    <div class="w3agile_special_deals_grid_left_grid1">
+                                        <img src="~/Assets/images/products/brocoli.jpg" alt=" " class="img-responsive" />
+
+                                        <h4>Laura</h4>
+                                    </div>
+                                </div>
+                            </article>
+                            <article style="position: absolute; width: 100%; opacity: 0;">
+                                <div class="banner-wrap">
+                                    <div class="w3agile_special_deals_grid_left_grid1">
+                                        <img src="~/Assets/images/products/onion.jpg" alt=" " class="img-responsive" />
+
+                                        <h4>Michael</h4>
+                                    </div>
+                                </div>
+                            </article>
+                            <article style="position: absolute; width: 100%; opacity: 0;">
+                                <div class="banner-wrap">
+                                    <div class="w3agile_special_deals_grid_left_grid1">
+                                        <img src="~/Assets/images/products/garlic__press11.jpg" alt=" " class="img-responsive" />
+
+                                        <h4>Rosy</h4>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <script src="~/Assets/js/jquery.wmuSlider.js"></script>
+                    <script>
+                        $('.example1').wmuSlider();
+                    </script>
+                </div>
+                <div class="col-md-5 w3agile_special_deals_grid_right">
+                    <img src="~/Assets/images/products/onion.jpg" alt=" " class="img-responsive" />
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+    <!-- //special-deals -->
+    <!-- new-products -->
+    @*<div class="new-products">*@
+
+    <div class="container">
+        <h3>New Products</h3>
+
+
+
+        <div class="agileinfo_new_products_grids">
+            @{
+                int count = 0;
+            }
+
+
+            @foreach (var items in Model.Products)
+            {
+                <div class="col-md-3 agileinfo_new_products_grid">
+                    <div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+                        <div class="hs-wrapper hs-wrapper1">
+                            <img src="@items.ImagePath" alt=" " class="img-responsive" />
+                            <div class="w3_hs_bottom w3_hs_bottom_sub">
+                                <ul>
+                                    <li>
+                                        <a href="#" data-toggle="modal" data-target="#myModal_@count">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h5><a href="single.html">Skirts</a></h5>
+                        <div class="simpleCart_shelfItem">
+                            <p> <i class="item_price">@items.Price</i></p>
+                            @*<p><a class="item_add" href="#">Add to cart</a></p>*@
+                            <p><a asp-controller="Cart" asp-action="addtocart" asp-route-id="@items.Id">Add to cart</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                @*This is product detail modal start*@
+
+                <div class="modal video-modal fade" id="myModal_@count" tabindex="-1" role="dialog"
+                     aria-labelledby="myModal6">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <section>
+                                <div class="modal-body">
+                                    <div class="col-md-5 modal_body_left">
+                                        <img src="@items.ImagePath" alt=" " class="img-responsive" />
+                                    </div>
+                                    <div class="col-md-7 modal_body_right">
+                                        <h4>@items.Title</h4>
+                                        <p>
+                                            @items.Description
+                                        </p>
+
+                                        <div class="modal_body_right_cart simpleCart_shelfItem">
+                                            <p> <i class="item_price">$@items.Price</i></p>
+                                            <p><a class="item_add" href="#">Add to cart</a></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                @*This is product detail modal end*@
+
+                count++;
+
+            }
+            <div class="clearfix"></div>
+        </div>
     </div>
 </div>
+<!-- //new-products -->
+<!-- top-brands -->
+
+
+@{
+    var pro = Model.Products.Where(c => c.CreatedAt >= (DateTime.Now.AddDays(-5))).ToList();
+    if (pro.Count > 0)
+    {
+        <div class="top-brands">
+            <div class="container">
+                <h3>Recently added Products</h3>
+
+                @{
+
+                    var p = Model.Products.Where(c => c.CreatedAt >= (DateTime.Now.AddDays(-5)));
+                }
+
+                <div class="sliderfig">
+                    <ul id="flexiselDemo1">
+
+                        @foreach (var items in p)
+                        {
+                            <li>
+                                <img src=@items.ImagePath alt=" " class="img-responsive" style="max-height:300px; max-width:300px" />
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $(window).load(function () {
+                        $("#flexiselDemo1").flexisel({
+                            visibleItems: 4,
+                            animationSpeed: 1000,
+                            autoPlay: true,
+                            autoPlaySpeed: 3000,
+                            pauseOnHover: true,
+                            enableResponsiveBreakpoints: true,
+                            responsiveBreakpoints: {
+                                portrait: {
+                                    changePoint: 480,
+                                    visibleItems: 1
+                                },
+                                landscape: {
+                                    changePoint: 640,
+                                    visibleItems: 2
+                                },
+                                tablet: {
+                                    changePoint: 768,
+                                    visibleItems: 3
+                                }
+                            }
+                        });
+
+                    });
+                </script>
+
+                <script type="text/javascript" src="~/Assets/js/jquery.flexisel.js"></script>
+            </div>
+        </div>
+    }
+}
+
+
+<!-- //top-brands -->

@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using FreshMart.Data;
 using FreshMart.Models;
 using FreshMart.Services;
+using FreshMart.ViewModels;
+using Microsoft.AspNetCore.Http;
 
 namespace FreshMart
 {
@@ -33,10 +35,26 @@ namespace FreshMart
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+
+            //for session
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddDistributedMemoryCache();
+
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(600);
+                options.Cookie.HttpOnly = true;
+            });
+            //for session
+
             services.AddMvc();
+            services.AddSession();
+            services.AddMemoryCache();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,8 +62,8 @@ namespace FreshMart
         {
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
             }
             else
@@ -56,6 +74,15 @@ namespace FreshMart
             app.UseStaticFiles();
 
             app.UseAuthentication();
+            app.UseSession();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+            });
 
             app.UseMvc(routes =>
             {
@@ -63,6 +90,10 @@ namespace FreshMart
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
+
+
     }
 }

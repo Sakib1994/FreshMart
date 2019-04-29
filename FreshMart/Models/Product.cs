@@ -1,48 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace FreshMart.Models
 {
     [Table("Products")]
     public class Product
     {
+        [Key]
         public int Id { get; set; }
 
-        [Required]
+        [DisplayName("Title (Required)")]
         public string Title { get; set; }
 
-        [Required]
         public int SellerId { get; set; }
+        [ForeignKey("SellerId")]
         public Seller Seller { get; set; }
 
-        [Required]
+        [DisplayName("Price (Required)")]
         public float Price { get; set; }
 
         public string Description { get; set; }
 
-        [Required]
+        [DisplayName("Unit (Required)")]
         public string Unit { get; set; }
 
-        [Required]
         public bool IsPublished { get; set; }
 
-        [Required]
+        [DisplayName("Item in Stock (Required)")]
         public int ItemInStock { get; set; }
 
-        [Required]
+        [DisplayName("District (Required)")]
         public int DistrictId { get; set; }
+        [ForeignKey("DistrictId")]
         public District District { get; set; }
 
-        [Required]
+        [DisplayName("Category (Required)")]
         public int CategoryId { get; set; }
-
+        [ForeignKey("CategoryId")]
         public Category Category { get; set; }
 
         //IMAGE
+        [DisplayName("Upload an image (Required)")]
         public string ImagePath { get; set; }
 
         public float OfferPrice { get; set; }
@@ -56,6 +56,6 @@ namespace FreshMart.Models
         [DataType(DataType.Date)]
         public DateTime UpdatedAt { get; set; }
 
-        //public ICollection<ProductOrder> ProductOrder { get; set; }
+        public ICollection<ProductOrder> ProductOrder { get; set; }
     }
 }
